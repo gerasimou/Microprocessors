@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TMP102Sensor/HelloWorld.ino&apos; to &apos;TMP102.ino&apos;" description="Rename resource &apos;HelloWorld.ino&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="HelloWorld.ino" name="TMP102.ino" stamp="1488111701177" updateReferences="true"/>
+</session>

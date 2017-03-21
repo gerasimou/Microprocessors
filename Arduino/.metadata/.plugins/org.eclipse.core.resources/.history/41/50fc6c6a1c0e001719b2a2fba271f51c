@@ -1,0 +1,27 @@
+#ifdef __IN_ECLIPSE__
+//This is a automatic generated file
+//Please do not modify this file
+//If you touch this file your change will be overwritten during the next build
+//This file has been generated on 2017-03-21 09:54:41
+
+#include "Arduino.h"
+#include "Arduino.h"
+#include <DHT.h>
+#include <Wire.h>
+#include "Adafruit_HTU21DF.h"
+#include <TFT.h>
+#include <SPI.h>
+#include <LiquidCrystal.h>
+#include <stdio.h>
+void setup() ;
+void runDHT22() ;
+void runHTU() ;
+void runTMP102();
+float getTMP102Temperature();
+void showTFT();
+void loop();
+
+
+#include "AllSensorsScreen.ino"
+
+#endif

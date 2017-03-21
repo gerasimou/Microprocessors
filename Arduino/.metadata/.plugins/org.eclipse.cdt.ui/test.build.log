@@ -1,0 +1,28 @@
+13:01:06 **** Incremental Build of configuration Release for project test ****
+make all 
+Building target: test
+Printing size:
+"/Users/sgerasimou/Documents/Eclipse/Eclipse Arduino/Eclipse Arduino.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-size" -A "/Users/sgerasimou/Documents/Programming/sloeber-workspace/test/Release/test.elf"
+/Users/sgerasimou/Documents/Programming/sloeber-workspace/test/Release/test.elf  :
+section                     size      addr
+.data                         32   8388864
+.text                       1542         0
+.bss                         166   8388896
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges                48         0
+.debug_info                 5052         0
+.debug_abbrev               2580         0
+.debug_line                 1088         0
+.debug_frame                 508         0
+.debug_str                  1815         0
+.debug_loc                  1814         0
+.debug_ranges                 56         0
+Total                      14782
+
+
+Finished building target: test
+ 
+
+13:01:06 Build Finished (took 146ms)
+

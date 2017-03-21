@@ -1,0 +1,9 @@
+Build\ before\ upload\ option=TRUE
+Clean\ Serial\ Monitor\ after\ upload=false
+FmStatus=14
+Open\ serial\ connections\ with\ the\ monitor=true
+Serial\ Monitor\ Last\ Used\ Line\ Ending\ index=2
+Serial\ Monitor\ Last\ Used\ auto\ scroll\ setting=true
+Serial\ monitor\ last\ selected\ Port=/dev/cu.usbmodem1421
+Serial\ monitor\ last\ selected\ rate=9600
+eclipse.preferences.version=1

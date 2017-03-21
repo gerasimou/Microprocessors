@@ -1,0 +1,28 @@
+15:18:11 **** Incremental Build of configuration Release for project TFTScreen ****
+make all 
+Building target: TFTScreen
+Printing size:
+"/Users/sgerasimou/Documents/Eclipse/Eclipse Arduino/Eclipse Arduino.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-size" -A "/Users/sgerasimou/Documents/Programming/sloeber-workspace/TFTScreen/Release/TFTScreen.elf"
+/Users/sgerasimou/Documents/Programming/sloeber-workspace/TFTScreen/Release/TFTScreen.elf  :
+section                     size      addr
+.data                         76   8388864
+.text                       7436         0
+.bss                         219   8388940
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges                80         0
+.debug_info                20415         0
+.debug_abbrev               4644         0
+.debug_line                 3579         0
+.debug_frame                1704         0
+.debug_str                  4093         0
+.debug_loc                 12982         0
+.debug_ranges                648         0
+Total                      55957
+
+
+Finished building target: TFTScreen
+ 
+
+15:18:11 Build Finished (took 62ms)
+

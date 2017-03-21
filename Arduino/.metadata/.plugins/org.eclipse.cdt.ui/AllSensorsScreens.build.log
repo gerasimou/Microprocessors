@@ -1,0 +1,28 @@
+15:19:34 **** Incremental Build of configuration Release for project AllSensorsScreens ****
+make all 
+Building target: AllSensorsScreens
+Printing size:
+"/Users/sgerasimou/Documents/Eclipse/Eclipse Arduino/Eclipse Arduino.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-size" -A "/Users/sgerasimou/Documents/Programming/sloeber-workspace/AllSensorsScreens/Release/AllSensorsScreens.elf"
+/Users/sgerasimou/Documents/Programming/sloeber-workspace/AllSensorsScreens/Release/AllSensorsScreens.elf  :
+section                      size      addr
+.data                         150   8388864
+.text                       16650         0
+.bss                          497   8389014
+.comment                       17         0
+.note.gnu.avr.deviceinfo       64         0
+.debug_aranges                136         0
+.debug_info                 38625         0
+.debug_abbrev                7223         0
+.debug_line                  8650         0
+.debug_frame                 2644         0
+.debug_str                   6765         0
+.debug_loc                  20625         0
+.debug_ranges                1232         0
+Total                      103278
+
+
+Finished building target: AllSensorsScreens
+ 
+
+15:19:34 Build Finished (took 66ms)
+

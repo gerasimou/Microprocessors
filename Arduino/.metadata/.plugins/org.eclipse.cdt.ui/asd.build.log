@@ -1,0 +1,28 @@
+14:06:10 **** Incremental Build of configuration Release for project asd ****
+make all 
+Building target: asd
+Printing size:
+"/Users/sgerasimou/Documents/Eclipse/Eclipse Arduino/Eclipse Arduino.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-size" -A "/Users/sgerasimou/Documents/Programming/sloeber-workspace/asd/Release/asd.elf"
+/Users/sgerasimou/Documents/Programming/sloeber-workspace/asd/Release/asd.elf  :
+section                    size      addr
+.data                         0   8388864
+.text                       444         0
+.bss                          9   8388864
+.comment                     17         0
+.note.gnu.avr.deviceinfo     64         0
+.debug_aranges               40         0
+.debug_info                1801         0
+.debug_abbrev              1630         0
+.debug_line                 363         0
+.debug_frame                 92         0
+.debug_str                  976         0
+.debug_loc                  309         0
+.debug_ranges                24         0
+Total                      5769
+
+
+Finished building target: asd
+ 
+
+14:06:10 Build Finished (took 74ms)
+
