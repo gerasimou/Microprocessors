@@ -1,3 +1,5 @@
+.DS_Store
+
 #Eclipse
 .metadata
 bin/
@@ -8,6 +10,9 @@ tmp/
 *.lo
 *.o
 *.obj
+*.d
+
+**Release
 
 # Compiled Dynamic libraries
 *.so
