@@ -1,6 +1,7 @@
 #include "common_dht_read.h"
 #include "pi_dht_read.h"
 #include <stdio.h>
+#include <iomanip>
 
 #include <wiringPi.h>          
 #include <lcd.h>               
@@ -18,7 +19,7 @@
 #define LCD_D6  21               //Data pin 6
 #define LCD_D7  14               //Data pin 7
 
-#USE RPI numbers
+//USE RPI numbers
 #define DHT_PIN 21
 
 
@@ -42,9 +43,14 @@ int main(void){
 
 		std::ostringstream oss;
 		//oss << rand() % 100;
-		oss <<  result <<","<< temp <<","<< hum;
+		oss <<  result <<" "<< temp <<"% "<< hum <<"%";
+                
+		std::stringstream ss; 
+		ss << std::fixed << std::setprecision(2) << temp;
 
-		lcdPuts(lcd, oss.str().c_str());
+//		lcdPuts(lcd, ss.str().c_str());//oss.str().c_str());
+                lcdPuts(lcd, oss.str().c_str());
+
 		std::cout << oss.str().c_str() << std::endl;	
 
 		delay(2000);

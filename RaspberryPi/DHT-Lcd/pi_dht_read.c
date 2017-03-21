@@ -105,7 +105,7 @@ int pi_dht_read(int type, int pin, float* humidity, float* temperature) {
       }
     }
   }
-  printf("Timeout4\n");
+//  printf("Timeout4\n");
 
   // Done with timing critical code, now interpret the results.
 
