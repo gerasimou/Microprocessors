@@ -52,7 +52,7 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 AR += \
-/Users/sgerasimou/Documents/Programming/sloeber-workspace/TestServoSpeed/Release/arduino.ar \
+/Users/sgerasimou/Documents/Git/Microprocessors/Arduino/TestServoSpeed/Release/arduino.ar \
 
 ELF += \
 TestServoSpeed.elf \
@@ -68,19 +68,19 @@ all: TestServoSpeed
 TestServoSpeed: $(HEX)
 	@echo 'Building target: $@'
 	@echo 'Printing size:'
-	"/Users/sgerasimou/Documents/Eclipse/Eclipse Arduino/Eclipse Arduino.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-size" -A "/Users/sgerasimou/Documents/Programming/sloeber-workspace/TestServoSpeed/Release/TestServoSpeed.elf"
+	"/Users/sgerasimou/Documents/Eclipse/Eclipse Arduino/Eclipse Arduino.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-size" -A "/Users/sgerasimou/Documents/Git/Microprocessors/Arduino/TestServoSpeed/Release/TestServoSpeed.elf"
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-/Users/sgerasimou/Documents/Programming/sloeber-workspace/TestServoSpeed/Release/arduino.ar: $(AR_OBJ)
+/Users/sgerasimou/Documents/Git/Microprocessors/Arduino/TestServoSpeed/Release/arduino.ar: $(AR_OBJ)
 	@echo 'Starting archiver'
-	"/Users/sgerasimou/Downloads/sloeber.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-gcc-ar" rcs    /Users/sgerasimou/Documents/Programming/sloeber-workspace/TestServoSpeed/Release/arduino.ar $(AR_OBJ)
+	"/Users/sgerasimou/Downloads/sloeber.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-gcc-ar" rcs    /Users/sgerasimou/Documents/Git/Microprocessors/Arduino/TestServoSpeed/Release/arduino.ar $(AR_OBJ)
 	@echo 'Finished building: $@'
 	@echo ' '
 
 TestServoSpeed.elf: $(LINK_OBJ) $(AR)
 	@echo 'Starting combiner'
-	"/Users/sgerasimou/Downloads/sloeber.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-gcc" -Wall -Wextra -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p -o "/Users/sgerasimou/Documents/Programming/sloeber-workspace/TestServoSpeed/Release/TestServoSpeed.elf"   $(LINK_OBJ) $(AR)   /Users/sgerasimou/Documents/Programming/sloeber-workspace/TestServoSpeed/Release/arduino.ar  "-L/Users/sgerasimou/Documents/Programming/sloeber-workspace/TestServoSpeed/Release" -lm
+	"/Users/sgerasimou/Downloads/sloeber.app/Contents/Eclipse//arduinoPlugin/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.3-arduino2/bin/avr-gcc" -Wall -Wextra -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p -o "/Users/sgerasimou/Documents/Programming/sloeber-workspace/TestServoSpeed/Release/TestServoSpeed.elf"   $(LINK_OBJ) $(AR)   /Users/sgerasimou/Documents/Git/Microprocessors/Arduino/TestServoSpeed/Release/arduino.ar  "-L/Users/sgerasimou/Documents/Programming/sloeber-workspace/TestServoSpeed/Release" -lm
 	@echo 'Finished building: $@'
 	@echo ' '
 

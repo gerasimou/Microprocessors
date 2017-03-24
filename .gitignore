@@ -12,7 +12,7 @@ tmp/
 *.obj
 *.d
 
-**Release
+Release/
 
 # Compiled Dynamic libraries
 *.so

@@ -9,16 +9,28 @@
 #include <LiquidCrystal.h>
 #include <stdio.h>
 
-
-//Constants
-#define LEDPIN 15     		// LED PIN
-#define DHTPIN 14     		// DHT sensor PIN
+// DHT
+#define DHTPIN 15     		// DHT sensor PIN
 #define DHTTYPE DHT22   	// DHT 22  (AM2302)
-#define TMP102_I2CADDR 0x48	//TMP102 address
-// TFT Parameterspin definition for the Uno
-#define CS   10
-#define DC   9
+
+//TMP102
+#define TMP102_I2CADDR 0x48	//TMP 102 address
+
+//LCD 16x2
+#define RS 2
+#define ENABLE 3
+#define D0 4
+#define D1 5
+#define D2 6
+#define D3 7
+
+// TFT Parameters for the Uno
 #define RST  8
+#define DC   9
+#define CS   10
+
+// LED
+#define LEDPIN 14
 
 
 // Initialize DHT sensor for normal 16mhz Arduino
@@ -28,7 +40,7 @@ DHT dht(DHTPIN, DHTTYPE);
 Adafruit_HTU21DF htu = Adafruit_HTU21DF();
 
 // Initialize the library with the numbers of the interface pins
-LiquidCrystal lcd(2, 3, 4, 5, 6, 7);
+LiquidCrystal lcd(RS, ENABLE, D0, D1, D2, D3);
 
 // Initialise TFT
 TFT TFTscreen = TFT(CS, DC, RST);
@@ -38,7 +50,7 @@ TFT TFTscreen = TFT(CS, DC, RST);
 float hum; 	 				//Stores humidity value
 float temp; 				//Stores temperature value
 
-char output[5];		// char array to print to the screen
+char output[5];				// char array to print to the screen
 float temperature[3];
 float humidity[3];
 
@@ -82,13 +94,6 @@ void runDHT22()
 	hum		= dht.readHumidity();
     temp	= dht.readTemperature();
 
-    //Print temp and humidity values to lcd
-    // set the cursor to column 0, line 0
-    lcd.setCursor(0, 0);
-    lcd.print(temp);
-
-    lcd.print(millis() / 1000);   // print the number of seconds since reset:
-
     temperature[0]  = temp;
     humidity[0]		= hum;
 
@@ -104,9 +109,6 @@ void runHTU()
 	 hum	= htu.readHumidity();
      temp	= htu.readTemperature();
 
-     lcd.setCursor(0, 1);
-     lcd.print(temp);
-
      temperature[1]	= temp;
      humidity[1]	= hum;
 
@@ -119,9 +121,6 @@ void runHTU()
 
 void runTMP102(){
 	float temp = getTMP102Temperature();
-
-	lcd.setCursor(6, 1);
-	lcd.print(temp);
 
 	temperature[2] = temp;
 
@@ -155,6 +154,24 @@ void showTFT(){
 	TFTscreen.text(String(humidity[1]).c_str(), 0, 80);
 }
 
+void showLCD(){
+
+	lcd.setCursor(0, 0);
+    lcd.print(millis() / 1000);   // print the number of seconds since reset:
+
+    //Print temp and humidity values to lcd
+    // set the cursor to column 0, line 0
+	lcd.setCursor(6, 0);
+    lcd.print(temperature[0]);
+
+    lcd.setCursor(0, 1);
+    lcd.print(temperature[1]);
+
+	lcd.setCursor(6, 1);
+	lcd.print(temp);
+
+}
+
 
 void loop(){
 	digitalWrite(LEDPIN, LOW);      // Pin 12 = 5 V, LED emits light
@@ -165,5 +182,6 @@ void loop(){
 	runHTU();
 	runTMP102();
 	showTFT();
+	showLCD();
 	delay(100);
 }
