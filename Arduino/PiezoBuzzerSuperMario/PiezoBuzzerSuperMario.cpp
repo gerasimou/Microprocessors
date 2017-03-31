@@ -1,31 +1,55 @@
 // Do not remove the include below
 #include "PiezoBuzzerSuperMario.h"
+#include "Microphone.h"
+
+#include <stdio.h>
+//#include <iostream>
+
+//using namespace std;
+
 
 #define MELODYPIN 15
 #define LEDPIN 14
 
+int track = 1;
 
 void setup(void)
 {
-  pinMode(MELODYPIN, OUTPUT);//buzzer
-  pinMode(LEDPIN, OUTPUT);//led indicator when singing a note
+	Serial.begin(9600);
+
+	pinMode(MELODYPIN, OUTPUT);//buzzer
+	pinMode(LEDPIN, OUTPUT);//led indicator when singing a note
 
 }
 
+String s;
 
 void loop(){
-  //sing the tunes
-  sing(1);
-  sing(1);
-  sing(2);
+//  //sing the tunes
+//  sing(1);
+//  sing(1);
+//  sing(2);
+
+	bool flag = runMicroPhone();
+//	bool flag = true;
+
+//	s = flag +"\t"+ track;
+	Serial.println(flag);
+
+	if (flag){
+		sing(track++);
+		if (track==3)
+			track=1;
+	}
+//	else if (flag && ++track==2){
+//		sing(2);
+//		track=0;
+//	}
 }
 
-int song = 0;
 
-
-void sing(int s) {
+void sing(int song) {
   // iterate over the notes of the melody:
-  song = s;
   if (song == 2) {
     Serial.println(" 'Underworld Theme'");
     int size = sizeof(underworld_melody) / sizeof(int);

@@ -62,8 +62,6 @@
 
  For more information, see http://arduino.cc/en/Tutorial/Tone
  */
-// LED
-const int buzzerPin = 15;
 
 // We'll set up an array with the notes we want to play
 // change these values to make different songs!

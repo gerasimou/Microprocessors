@@ -10,6 +10,8 @@
 //add your includes for the project PiezoBuzzer here
 
 
+// LED
+const int buzzerPin = 15;
 //end of add your includes here
 
 
