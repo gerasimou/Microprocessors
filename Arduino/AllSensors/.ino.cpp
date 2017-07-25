@@ -2,7 +2,7 @@
 //This is a automatic generated file
 //Please do not modify this file
 //If you touch this file your change will be overwritten during the next build
-//This file has been generated on 2017-03-30 23:00:30
+//This file has been generated on 2017-05-19 01:07:52
 
 #include "Arduino.h"
 #include "Arduino.h"
@@ -18,7 +18,6 @@ void runDHT22() ;
 void runHTU() ;
 void runTMP102();
 float getTMP102Temperature();
-void showTFT();
 void showLCD();
 void loop();
 

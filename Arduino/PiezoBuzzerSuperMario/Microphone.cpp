@@ -17,7 +17,7 @@ bool runMicroPhone() {
 
 	// collect data for 250 miliseconds
 	while (millis() - start < sampleWindow) {
-		unsigned int knock = analogRead(2);
+		unsigned int knock = analogRead(MICROPHONEPIN);
 		if (knock < 1024) //This is the max of the 10-bit ADC so this loop will include all readings
 				{
 			if (knock > signalMax) {

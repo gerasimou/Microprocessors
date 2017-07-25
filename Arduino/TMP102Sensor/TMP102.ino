@@ -11,13 +11,14 @@
 #include <LiquidCrystal.h>
 #include <Wire.h>
 
-#define LEDPIN 2     		// what pin we're connected to
+#define LEDPIN 14     		// what pin we're connected to
 
 //TMP102 address
 #define TMP102_I2CADDR 0x48
 
 // initialize the library with the numbers of the interface pins
-LiquidCrystal lcd(9, 8, 4, 5, 6, 7);
+LiquidCrystal lcd(2, 3, 4, 5, 6, 7);
+
 
 
 void setup(){

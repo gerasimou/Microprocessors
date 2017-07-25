@@ -10,8 +10,8 @@
 
 
 // DHT
-#define DHT_PIN 15     		// DHT sensor PIN Analog 1
-#define DHT_TYPE DHT22   	// DHT 22  (AM2302)
+#define DHT_PIN 15     		//Analog 1
+#define DHT_TYPE DHT22   	//DHT 22  (AM2302)
 
 //TMP102
 #define TMP102_I2CADDR 0x48	//TMP 102 address

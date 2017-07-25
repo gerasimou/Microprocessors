@@ -28,7 +28,9 @@ Adafruit_HTU21DF::Adafruit_HTU21DF() {
 boolean Adafruit_HTU21DF::begin(void) {
   Wire.begin();
   
+  Serial.println("HTU21D-F begin");
   reset();
+  Serial.println("HTU21D-F reset");
 
   Wire.beginTransmission(HTU21DF_I2CADDR);
   Wire.write(HTU21DF_READREG);

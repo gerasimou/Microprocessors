@@ -11,8 +11,8 @@
 
 
 //Constants
-#define LEDPIN 15     		// LED PIN
-#define DHTPIN 14     		// DHT sensor PIN
+#define LEDPIN 14     		// LED PIN
+#define DHTPIN 15     		// DHT sensor PIN
 #define DHTTYPE DHT22   	// DHT 22  (AM2302)
 #define TMP102_I2CADDR 0x48	//TMP102 address
 // TFT Parameterspin definition for the Uno

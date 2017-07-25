@@ -8,7 +8,7 @@
 //using namespace std;
 
 
-#define MELODYPIN 15
+#define MELODYPIN 17
 #define LEDPIN 14
 
 int track = 1;

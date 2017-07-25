@@ -43,7 +43,7 @@ Adafruit_HTU21DF htu = Adafruit_HTU21DF();
 LiquidCrystal lcd(RS, ENABLE, D0, D1, D2, D3);
 
 // Initialise TFT
-TFT TFTscreen = TFT(CS, DC, RST);
+//TFT TFTscreen = TFT(CS, DC, RST);
 
 //Variables
 //int chk;
@@ -74,17 +74,17 @@ void setup()
   //init  LCD: set up  number of columns and rows:
   lcd.begin(16, 2);
   lcd.print("Starting");
-
-  //initTFT
-  TFTscreen.begin();
-  TFTscreen.background(0, 0, 0); 				// clear the screen with a black background
-  TFTscreen.stroke(255, 255, 255);				// set the font color to white
-  TFTscreen.setTextSize(2);						// set the font size
-  TFTscreen.text("Starting", 0, 0); 	// write the text to the top left corner of the screen
-
+//
+//  //initTFT
+//  TFTscreen.begin();
+//  TFTscreen.background(0, 0, 0); 				// clear the screen with a black background
+//  TFTscreen.stroke(255, 255, 255);				// set the font color to white
+//  TFTscreen.setTextSize(2);						// set the font size
+//  TFTscreen.text("Starting", 0, 0); 	// write the text to the top left corner of the screen
+//
   delay(2000);
   lcd.clear();
-  TFTscreen.setTextSize(5);			  			// ste the font size very large for the loop
+//  TFTscreen.setTextSize(5);			  			// ste the font size very large for the loop
 }
 
 
@@ -143,16 +143,16 @@ float getTMP102Temperature(){
 }
 
 
-void showTFT(){
-	String timeStr = String(millis()/1000);
-	TFTscreen.stroke(255, 255, 255);
-	 // clear the screen before starting again
-	TFTscreen.background(0,0,0);
-	// print the sensor value
-	TFTscreen.text( String(millis()/1000).c_str(), 0, 0);
-	TFTscreen.text(String(humidity[0]).c_str(), 0, 40);
-	TFTscreen.text(String(humidity[1]).c_str(), 0, 80);
-}
+//void showTFT(){
+//	String timeStr = String(millis()/1000);
+//	TFTscreen.stroke(255, 255, 255);
+//	 // clear the screen before starting again
+//	TFTscreen.background(0,0,0);
+//	// print the sensor value
+//	TFTscreen.text( String(millis()/1000).c_str(), 0, 0);
+//	TFTscreen.text(String(humidity[0]).c_str(), 0, 40);
+//	TFTscreen.text(String(humidity[1]).c_str(), 0, 80);
+//}
 
 void showLCD(){
 
@@ -181,7 +181,7 @@ void loop(){
 	runDHT22();
 	runHTU();
 	runTMP102();
-	showTFT();
+//	showTFT();
 	showLCD();
 	delay(100);
 }

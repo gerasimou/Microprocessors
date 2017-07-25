@@ -29,7 +29,7 @@ bool runMicroPhone() {
 	peakToPeak = signalMax - signalMin;  // max - min = peak-peak amplitude
 	double volts = (peakToPeak * 3.3) / 1024;  // convert to volts
 
-//	Serial.println(volts);
+	Serial.println(volts);
 	if (volts >= 1.0) {
 		//turn on LED
 //		digitalWrite(LEDPIN, HIGH);

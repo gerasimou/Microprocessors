@@ -10,8 +10,8 @@
 
 
 //Constants
-#define DHTPIN 14     		// what pin we're connected to
-#define LEDPIN 15     		// what pin we're connected to
+#define DHTPIN 15     		// what pin we're connected to
+#define LEDPIN 14     		// what pin we're connected to
 #define DHTTYPE DHT22   	// DHT 22  (AM2302)
 
 DHT dht(DHTPIN, DHTTYPE); 	// Initialize DHT sensor for normal 16mhz Arduino
@@ -27,6 +27,7 @@ float temp; //Stores temperature value
 void setup()
 {
   Serial.begin(9600);
+  Serial.println("Starting!");
   pinMode(LEDPIN, OUTPUT);  // Set digital pin 2 -> output
   dht.begin();
 

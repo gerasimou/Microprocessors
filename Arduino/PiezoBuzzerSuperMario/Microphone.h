@@ -11,6 +11,7 @@
 
 // LED
 #define LEDPIN 14
+#define MICROPHONEPIN 2 //analog A2
 
 const int sampleWindow = 250; // Sample window width in mS (250 mS = 4Hz)
 //unsigned int knock;

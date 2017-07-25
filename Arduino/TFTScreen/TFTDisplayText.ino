@@ -108,5 +108,6 @@ void loop(){
   delay(1000);
 
   TFTscreen.background(0,0,0); // clear the screen before starting again
+  Serial.println(millis() / 1000);   // print the number of seconds since reset:
   delay(1000);
 }

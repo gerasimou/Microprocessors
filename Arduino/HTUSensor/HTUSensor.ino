@@ -1,5 +1,5 @@
 #include <Arduino.h>
-//#include <Wire.h>
+#include <Wire.h>
 #include "Adafruit_HTU21DF.h"
 
 // Connect Vin to 3-5VDC
@@ -17,11 +17,14 @@ void setup() {
     Serial.println("Couldn't find sensor!");
     while (1);
   }
+  Serial.println("Starting!");
 }
 
 
 void loop() {
-  Serial.print("Temp: "); Serial.print(htu.readTemperature());
-  Serial.print("\t\tHum: "); Serial.println(htu.readHumidity());
+  Serial.print("Temp: ");
+  Serial.print(htu.readTemperature());
+  Serial.print("\t\tHum: ");
+  Serial.println(htu.readHumidity());
   delay(500);
 }

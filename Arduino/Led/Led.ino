@@ -1,7 +1,7 @@
 #include "Arduino.h"
 //The setup function is called once at startup of the sketch
 
-#define PIN 15     		// what pin we're connected to
+#define PIN 14    		// what pin we're connected to
 
 void setup()
 {
