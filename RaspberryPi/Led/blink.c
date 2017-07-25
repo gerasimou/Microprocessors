@@ -28,17 +28,20 @@
 
 // LED Pin - wiringPi pin 0 is BCM_GPIO 17.
 
-#define	LED	0
+#define	LED	29
 
 int main (void)
 {
   printf ("Raspberry Pi blink\n") ;
 
   wiringPiSetup () ;
+  printf("WiringPi Done\n");
   pinMode (LED, OUTPUT) ;
+  printf("Ready\n");
 
   for (;;)
   {
+    printf("Running\n");
     digitalWrite (LED, HIGH) ;	// On
     delay (500) ;		// mS
     digitalWrite (LED, LOW) ;	// Off
