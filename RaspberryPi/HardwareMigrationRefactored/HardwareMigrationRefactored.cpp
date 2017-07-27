@@ -58,13 +58,13 @@ void showLCD(){
 
     //Print temp and humidity values to lcd
     // set the cursor to column 0, line 0
-	lcd.setCursor(6, 0);
+	lcd.setCursor(10, 0);
     lcd.print(temperature[0]);
 
     lcd.setCursor(0, 1);
     lcd.print(temperature[1]);
 
-	lcd.setCursor(6, 1);
+	lcd.setCursor(10, 1);
 	lcd.print(humidity[0]);
 
 }

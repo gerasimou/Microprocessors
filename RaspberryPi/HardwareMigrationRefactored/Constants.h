@@ -36,7 +36,7 @@
 #define TFT_CS 10
 
 // LED
-#define LED_PIN 14			//Analog 0
+#define LED_PIN 25			//Analog 0
 
 //Piezobuzzer
 #define MELODYPIN 17		//Analog 3

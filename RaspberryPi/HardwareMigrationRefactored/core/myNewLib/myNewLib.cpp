@@ -5,16 +5,18 @@
 #include <wiringPi.h>
 #include <lcd.h>
 #include "../../Constants.h"
+//#include <string>
+#include <sstream>
 
 //lcd handle
-int lcd;
+int lcdHandle;
 #define ROWS 2
 #define COLS 16
 #define BITS 4
 
 //Sensor
-float temp = 0.0f;
-float hum  = 0.0f;
+float t = 0.0f;
+float h  = 0.0f;
 
 
 //int cursorX = 0;
@@ -25,7 +27,7 @@ float hum  = 0.0f;
 			uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7)
 			: myPrint() {
 	  	//init lcd
-	  	lcd = lcdInit (ROWS, COLS, BITS, LCD_RS, LCD_E, LCD_D0, LCD_D1, LCD_D2, LCD_D3, 0, 0, 0, 0);
+	  	lcdHandle = lcdInit (ROWS, COLS, BITS, LCD_RS, LCD_ENABLE, LCD_D0, LCD_D1, LCD_D2, LCD_D3, 0, 0, 0, 0);
 		return;
 	}
 
@@ -33,7 +35,7 @@ float hum  = 0.0f;
 			uint8_t d1, uint8_t d2, uint8_t d3, uint8_t d4, uint8_t d5, uint8_t d6, uint8_t d7)
 			: myPrint() {
 	  	//init lcd
-	  	lcd = lcdInit (ROWS, COLS, BITS, LCD_RS, LCD_E, LCD_D0, LCD_D1, LCD_D2, LCD_D3, 0, 0, 0, 0);
+	  	lcdHandle = lcdInit (ROWS, COLS, BITS, LCD_RS, LCD_ENABLE, LCD_D0, LCD_D1, LCD_D2, LCD_D3, 0, 0, 0, 0);
 		return;
 	}
 
@@ -41,14 +43,14 @@ float hum  = 0.0f;
 			uint8_t d1, uint8_t d2, uint8_t d3)
 		: myPrint() {
 	  	//init lcd
-	  	lcd = lcdInit (ROWS, COLS, BITS, LCD_RS, LCD_E, LCD_D0, LCD_D1, LCD_D2, LCD_D3, 0, 0, 0, 0);
+	  	lcdHandle = lcdInit (ROWS, COLS, BITS, LCD_RS, LCD_ENABLE, LCD_D0, LCD_D1, LCD_D2, LCD_D3, 0, 0, 0, 0);
 		return;
 	}
 
 	myLiquidCrystal::myLiquidCrystal(uint8_t rs, uint8_t enable, uint8_t d0, uint8_t d1, uint8_t d2, uint8_t d3)
 		: myPrint() {
 	  	//init lcd
-	  	lcd = lcdInit (ROWS, COLS, BITS, LCD_RS, LCD_E, LCD_D0, LCD_D1, LCD_D2, LCD_D3, 0, 0, 0, 0);
+	  	lcdHandle = lcdInit (ROWS, COLS, BITS, LCD_RS, LCD_ENABLE, LCD_D0, LCD_D1, LCD_D2, LCD_D3, 0, 0, 0, 0);
 		return;
 	}
 
@@ -58,19 +60,19 @@ float hum  = 0.0f;
 	}
 
 	void myLiquidCrystal::setCursor(uint8_t a, uint8_t b){
-		lcdPosition(lcd, a, b)
+		lcdPosition(lcdHandle, a, b);
 		return;
 	}
 
 	void myLiquidCrystal::clear() {
-		lcdClear    (lcd) ;
+		lcdClear    (lcdHandle) ;
 		return;
 	}
 
 	//TODO: pure virtual not considered
 	size_t myLiquidCrystal::write(uint8_t value) {
 //		return l->write(value);
-//	  return 1; // assume sucess
+	  return 1; // assume sucess
 	}
 
 
@@ -79,22 +81,24 @@ float hum  = 0.0f;
 
 	size_t myPrint::print(const char str[])
 	{
-	  lcdPuts(lcd, str);
+	  lcdPuts(lcdHandle, str);
 	  return 0;
 	}
 
 	size_t myPrint::print(unsigned long n, int base)
 	{
-	  lcdPuts(lcd, n + "");
+	  lcdPuts(lcdHandle, n + "");
 	  return 0;
 	}
 
 
 	size_t myPrint::print(double n, int digits)
 	{
-//		String s(n);
-//		s.concat(n);
-	  lcdPuts(lcd, n + "");
+	  //std::string s(n);
+	 // s.concat(n);
+	  std::stringstream s;
+	  s << n;
+	  lcdPuts(lcdHandle, s.str().c_str());
 	  return 0;
 	}
 
@@ -111,14 +115,14 @@ float hum  = 0.0f;
 
 	float DHT::readHumidity(bool force) {
 		//read sensors
-		int result = pi_dht_read(DHT22, DHT_PIN, &temp, &hum);
-		return hum;
+		int result = pi_dht_read(DHT22, DHT_PIN, &t, &h);
+		return h;
 	}
 
 	float DHT::readTemperature(bool S, bool force) {
 		//read sensors
-		int result = pi_dht_read(DHT22, DHT_PIN, &temp, &hum);
-		return temp;
+		int result = pi_dht_read(DHT22, DHT_PIN, &t, &h);
+		return t;
 	}
 
 //?}
