@@ -10,7 +10,7 @@
 
 
 // DHT
-#define DHT_PIN 15     		//Analog 1
+#define DHT_PIN 21     		//Analog 1
 #define DHT_TYPE 22   	//DHT 22  (AM2302)
 
 //#define INPUT 0x0
@@ -23,12 +23,12 @@
 #define TMP102_I2CADDR 0x48	//TMP 102 address
 
 //LCD 16x2
-#define LCD_RS 2
-#define LCD_ENABLE 3
-#define LCD_D0 4
-#define LCD_D1 5
-#define LCD_D2 6
-#define LCD_D3 7
+#define LCD_RS 0
+#define LCD_ENABLE 2
+#define LCD_D0 21
+#define LCD_D1 22
+#define LCD_D2 23
+#define LCD_D3 24
 
 // TFT Parameters for the Uno
 #define TFT_RST  8

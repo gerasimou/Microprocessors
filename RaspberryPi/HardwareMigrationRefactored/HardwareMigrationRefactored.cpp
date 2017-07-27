@@ -110,6 +110,9 @@ void loop(){
 
 int main(void)
 {
+	//init wiringPi protocol
+  	wiringPiSetup();
+
 	setup();
 
 	for (;;) {
