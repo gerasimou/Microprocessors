@@ -21,14 +21,11 @@
 								<option id="io.sloeber.compiler.cpp.sketch.option.incpath.103518530" name="Include Paths (-I)" superClass="io.sloeber.compiler.cpp.sketch.option.incpath" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/core/Sensors}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/core/myNewLib}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/LiquidCrystal}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/LiquidCrystal/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/SPI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/SPI/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/TFT}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/TFT/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/Wire}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/Wire/src}&quot;"/>
 								</option>
@@ -42,8 +39,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/LiquidCrystal/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/SPI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/SPI/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/TFT}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/TFT/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/Wire}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/Wire/src}&quot;"/>
 								</option>
@@ -57,8 +52,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/LiquidCrystal/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/SPI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/SPI/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/TFT}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/TFT/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/Wire}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/HardwareUpdate/libraries/Wire/src}&quot;"/>
 								</option>
